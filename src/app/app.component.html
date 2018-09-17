@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="grid-container">
+    <zlux-grid #grid [autoLayout]="false" [columns]="columnMetaData | zluxTableMetadataToColumns" [customPaginator]="true"
+      [paginator]="false" [editable]="false" emptyMessage="No rows to display" (rowsPerPageChange)="onRowsPerPageChange($event)"
+      [resizableColumns]="true" [rows]="rowsToDisplay" [scrollableHorizontal]="true"></zlux-grid>
+  </div>
+  <div class="paginator">
+    <zlux-paginator #paginator [rows]="rowsPerPage" [totalRecords]="rows" (onPageChange)="onPageChange($event)"
+      [hasMoreRecords]="false"></zlux-paginator>
+  </div>
+</div>
